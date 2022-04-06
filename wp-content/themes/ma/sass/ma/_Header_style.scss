@@ -1,0 +1,32 @@
+.site{
+  overflow: hidden;
+}
+.site-header{
+    display: flex;
+    margin: 0 auto;
+}
+
+.site-branding{
+    font-family: $font_primary;
+    margin: auto 1.6rem;
+    display: flex;
+    float: left;
+    a{
+        text-decoration: none;
+    }
+}
+.site-title{
+    font-family: $font_primary;
+    font-size: 2rem;
+}
+.site-title,.site-description{
+    white-space: nowrap;
+    flex-direction: column;
+    margin:0.5rem;
+}
+.site-description{
+    float: right;
+    padding:0.5rem;
+    font-style: italic;
+    vertical-align:bottom;
+}

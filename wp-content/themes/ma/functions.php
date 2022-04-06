@@ -138,6 +138,7 @@ add_action( 'widgets_init', 'ma_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ma_scripts() {
+	wp_enqueue_style('ma-fonts','https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap');
 	wp_enqueue_style( 'ma-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'ma-style', 'rtl', 'replace' );
 
@@ -148,6 +149,19 @@ function ma_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ma_scripts' );
+
+/**
+ * Add preconnect for Google fonts. (._.)
+ */
+function ma_resource_hints($urls, $relation_type){
+ if(wp_style_is('ma-fonts','queue') && 'preconnect' === $relation_type){
+	 $urls[]= array(
+		'href'=>'https://fonts.gstatic.com',
+		'crossorigin'
+	 );}
+	 return $urls;
+}
+add_filter('wp_resource_hints','ma_resource_hints',1,2);
 
 /**
  * Implement the Custom Header feature.

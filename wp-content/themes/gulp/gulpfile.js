@@ -2,11 +2,13 @@ const _themename = 'ma';
 
 const gulp = require('gulp'),
 
+
 	// prepare and optimize code
  
 	browserSync = require('browser-sync').create(),	
   reload  = browserSync.reload,	
-	sass = require('gulp-sass'),	
+	sass = require('gulp-sass')(require('sass')),
+
   sourcemaps=require('gulp-sourcemaps'),	
   autoprefixer=require('gulp-autoprefixer'),	
   lineec  = require( 'gulp-line-ending-corrector' ),	
@@ -14,12 +16,12 @@ const gulp = require('gulp'),
   rename  = require('gulp-rename');	
 
 	// Name of working theme folder
-	var root = '../' + _themename + '/',
+	let root = '../' + _themename + '/',
 	scss = root + 'sass/',
 	js = root + 'js/';
 
   // php files
-  var PHPWatchFiles  = root + '**/**/*.php';	
+  let PHPWatchFiles  = root + '**/**/*.php';	
 
 
 function ltr_css() {
