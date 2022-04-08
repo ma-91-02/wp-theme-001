@@ -1,0 +1,338 @@
+body,
+.site {
+  margin: 0;
+}
+.site-main {
+  width: 70%;
+  float: left;
+  padding: 2rem;
+}
+
+.widget-area {
+  width: 30%;
+  float: right;
+  padding: 2rem;
+  padding-top: 3rem;
+  overflow: hidden;
+  word-break: normal;
+  word-wrap: normal;
+}
+
+.no-sidebar {
+  .entry-content {
+    width: 100%;
+    float: none;
+    padding: 2rem;
+  }
+}
+.site-footer {
+  width: 100%;
+}
+.entry-header,
+.entry-footer {
+  text-align: center;
+}
+.entry-footer {
+  span {
+    display: inline-block;
+    padding: 1rem;
+    font-family: $font_regular;
+  }
+}
+.entry-meta {
+  margin-bottom: 1rem;
+  font-family: $font_bold;
+}
+.post {
+  word-break: break-word;
+  padding: 1rem;
+  border: 0.2rem solid #f2f2f2;
+  p,
+  pre,
+  ul,
+  ol,
+  code,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  em,
+  strong,
+  span {
+    unicode-bidi: plaintext;
+  }
+  a {
+    unicode-bidi: isolate;
+  }
+}
+.site-content {
+  word-wrap: break-word;
+}
+.widget {
+  padding: 1rem;
+  border-bottom: 0.2rem solid #f2f2f2;
+  ul {
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+    li {
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+.has-post-thumbnail {
+  text-align: center;
+  p {
+    text-align: left;
+  }
+}
+.entry-content {
+  figure {
+    text-align: center;
+  }
+}
+
+blockquote {
+  padding: 1rem;
+  // border: 0.2 solid #f2f2f2; if you need change this you can change this is from /sass/base/typography/_copy.scss line 12
+}
+
+code {
+  background-color: #f2f2f2;
+  unicode-bidi: plaintext;
+}
+
+.comment {
+  padding: 0.5rem;
+  line-height: normal;
+  border: 0.2rem solid #f2f2f2;
+  background-color: #f8f8f8;
+  box-shadow: inset 0 0.2rem 0.5rem #f2f2f2;
+  li > ol {
+    margin: 0;
+  }
+}
+
+.format-image {
+  text-align: center;
+}
+
+.widget ul {
+  margin: 0.5rem;
+}
+.nav-previous {
+  float: left;
+  width: 50%;
+}
+.nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/*
+*
+Site content responsiveness
+*
+*/
+
+@media (max-width: $x-large) {
+  .site-main {
+    padding: 1rem;
+  }
+  .widget-area {
+    padding: 1rem;
+    padding-top: 1.5rem;
+  }
+  .no-sidebar {
+    .entry-content {
+      padding: 1rem;
+    }
+  }
+  .entry-footer {
+    span {
+      padding: 0.5rem;
+    }
+  }
+  .entry-meta {
+    margin-bottom: 0.5rem;
+  }
+  .post {
+    padding: 0.5rem;
+  }
+
+  .widget {
+    padding: 0.5rem;
+  }
+  blockquote {
+    padding: 0.5rem;
+  }
+  .comment {
+    padding: 0.5rem;
+  }
+  ul,
+  ol {
+    margin: 0 1rem 0.5rem 0;
+  }
+  li > ol,
+  li > ul {
+    margin: auto;
+  }
+}
+
+@media (max-width: $large) {
+  .site-main {
+    padding: 0.9rem;
+  }
+  .widget-area {
+    padding: 0.9rem;
+    padding-top: 1.3rem;
+  }
+  .no-sidebar {
+    .entry-content {
+      padding: 0.9rem;
+    }
+  }
+  .entry-footer {
+    span {
+      padding: 0.4rem;
+    }
+  }
+  .entry-meta {
+    margin-bottom: 0.4rem;
+  }
+  .post {
+    padding: 0.4rem;
+  }
+
+  .widget {
+    padding: 0.4rem;
+  }
+  blockquote {
+    padding: 0.4rem;
+  }
+  .comment {
+    padding: 0.4rem;
+  }
+  ul,
+  ol {
+    margin: 0 0.9rem 0.4rem 0;
+  }
+  li > ol,
+  li > ul {
+    margin: auto;
+  }
+}
+
+@media (max-width: $medium) {
+  .site-main,
+  .widget-area {
+    @include htags(1rem);
+  }
+  .site-main {
+    width: 100%;
+    float: none;
+    padding: 0.9rem;
+  }
+  .widget-area {
+    width: 100%;
+    float: none;
+    text-align: left;
+    padding: 0.9rem;
+    padding-top: 1.3rem;
+  }
+  .site-footer {
+    font-size: $font_size * 0.5;
+  }
+  .comment {
+    font-size: $font_size * 0.5;
+  }
+  ul,
+  ol {
+    margin: 0 0.9rem 0.4rem 0;
+  }
+  li > ol,
+  li > ul {
+    margin: auto;
+  }
+}
+
+@media (max-width: $small) {
+  .site-main,
+  .widget-area {
+    @include htags(1rem);
+  }
+  .site-main {
+    padding: 0.8rem;
+    font-size: $font_size * 0.4;
+  }
+  .widget-area {
+    padding: 0.8rem;
+    padding-top: 1.2rem;
+  }
+  .site-footer {
+    font-size: $font_size * 0.4;
+  }
+  .comment {
+    font-size: $font_size * 0.4;
+  }
+  ul,
+  ol {
+    margin: 0 0.5rem 0.1rem 0;
+  }
+  li > ol,
+  li > ul {
+    margin: auto;
+  }
+}
+@media (max-width: $x-small) {
+  .site-main,
+  .widget-area {
+    @include htags(0.6rem);
+  }
+  .site-main {
+    padding: 0.8rem;
+    font-size: $font_size * 4;
+  }
+  .widget-area {
+    padding: 0.5rem;
+    padding-top: 0.9rem;
+  }
+  .entry-footer,
+  .entry-meta {
+    font-size: $font_size * 0.4;
+    a {
+      font-size: $font_size * 0.4;
+    }
+  }
+  .site-footer {
+    font-size: $font_size * 0.4;
+  }
+  ol.comment-list {
+    padding: 0;
+    margin: 0;
+  }
+  .comment {
+    font-size: $font_size * 0.4;
+    p {
+      margin: 0;
+    }
+    ul,
+    ol {
+      margin: 0;
+      padding: 0;
+    }
+    li > ol,
+    li > ul {
+      margin: auto;
+    }
+  }
+
+  .widget ul {
+    margin: 0;
+  }
+}

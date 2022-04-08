@@ -1,0 +1,64 @@
+.site-footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-family: $font_bold;
+}
+.site-info {
+  padding: 0.5rem;
+}
+
+/*
+*
+Footer Sidebar
+*
+*/
+
+.footer-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  .widget {
+    display: block;
+    padding: 0.5rem;
+    margin: 0;
+    border: none;
+    word-wrap: break-word;
+    word-break: break-word;
+    ul {
+      padding: 0;
+      margin: 0;
+      text-align: start;
+      font-size: 0.6 * $font_size;
+    }
+    width: 25%;
+  }
+  .widget:only-child {
+    width: 100%;
+    text-align: center;
+  }
+  h2,
+  a,
+  .widget li a {
+    color: #fff;
+  }
+  a:hover {
+    color: $color_links_hover;
+  }
+}
+
+@media (max-width: $small) {
+  .footer-sidebar {
+    .widget {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: $x-small) {
+  .footer-sidebar {
+    .widget {
+      width: 100%;
+    }
+  }
+}

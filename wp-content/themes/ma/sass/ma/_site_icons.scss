@@ -1,0 +1,107 @@
+.menu-item-has-children>a::after{
+    margin: 0.2rem;
+    position: absolute;
+    font-family: $font_awesome;
+    content:"\f0d7";
+    vertical-align: middle;
+}
+.page_item_has_children>a::after{
+    margin: 0.2rem;
+    position: absolute;
+    font-family: $font_awesome;
+    content:"\f0d7";
+    vertical-align: middle;
+}
+a.open::after{
+    margin:0.2rem;
+    position:absolute;
+    font-family:$font_awesome;
+    content:"\f0d7";
+    vertical-align:middle;
+}
+
+.edit-link a::before{
+    unicode-bidi: isolate;
+    font-family: $font_awesome;
+    content:'\f004';
+    margin:0.2rem;
+}
+.comments-link a::before{
+    unicode-bidi: isolate;
+    font-family: $font_awesome;
+    content:'\f075';
+    margin: 0.2rem;
+}
+.cat-links a::before{
+    unicode-bidi: isolate;
+    font-family: $font_awesome;
+    content:'\f07c';
+    margin: 0.2rem;
+}
+.tags-links a::before{
+    unicode-bidi: isolate;
+    font-family: $font_awesome;
+    content:'\f02c';
+    margin: 0.2rem;
+}
+.widget_recent_entries li::before{
+    unicode-bidi: isolate;
+    font-family: $font_awesome;
+    content:'\f15b';
+    margin: 0.2rem;
+}
+.widget_pages li::before{
+    unicode-bidi: isolate;
+    font-family: $font_awesome;
+    content:'\f15b';
+    margin: 0.2rem;
+}
+
+.wp-block-latest-comments li::before {
+    unicode-bidi: isolate;
+    font-family: $font_awesome;
+    content:'\f075';
+    margin: 0.2rem; 
+}
+
+.wp-block-archives li::before{
+    unicode-bidi: isolate;
+    font-family: $font_awesome;
+    content:'\f187';
+    margin: 0.2rem;
+}
+
+.wp-block-categories li:before{
+    unicode-bidi: isolate;
+    font-family: $font_awesome;
+    content:'\f07c';
+    margin: 0.2rem;
+}
+
+.wp-block-latest-posts li::before{
+    unicode-bidi: isolate;
+    font-family: $font_awesome;
+    content:'\f0c1';
+    margin: 0.2rem;
+}
+
+.nav-next a::after{
+    unicode-bidi: isolate;
+    font-family: $font_awesome;
+    content:'\f0a8';
+    margin: 0.2rem;
+}
+
+.nav-previous a::before{
+    unicode-bidi: isolate;
+    font-family: $font_awesome;
+    content:'\f0a9';
+    margin: 0.2rem;
+}
+
+.reply a::before{
+    unicode-bidi: isolate;
+    font-family: $font_awesome;
+    content:'\f064';
+    margin: 0.2rem;
+}

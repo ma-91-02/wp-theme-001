@@ -60,14 +60,24 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'ma'); ?></button>
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					)
-				);
-				?>
+				<h1 class="screen-reader-text"><?php esc_html_e('Primary Menu', 'ma'); ?></h1>
+				<i id="navicon" class="fa fa-navicon"></i>
+				<div id="menu-bar" class="menu-bar" aria-controls="primary-menu" aria-expanded="false">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						)
+					);
+					?></div>
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->
+		<div id="header-image" class="header-image">
+			<?php if (is_front_page()) {
+				the_header_image_tag();
+			}
+			?>
+		</div>
+		<!-- Header Image -->
+		<div id="content" class="site-content"></div>

@@ -9,6 +9,9 @@ ma fonts
 $font_primary: "Cairo", sans-serif;
 $font_regular: "Noto Kufi Arabic", "Open Sans", "Arial";
 $font_bold: "Noto Kufi Arabic Bold", "Open Sans", "Arial";
+$font_size:1.6rem;
+
+$font_awesome:'FontAwesome';
 
 @mixin htags($factor: 1rem) {
   h1 {
@@ -30,3 +33,29 @@ $font_bold: "Noto Kufi Arabic Bold", "Open Sans", "Arial";
     font-size: 0.9 $factor;
   }
 }
+
+/*
+*
+ma screen sizes
+*
+*/
+$x-large:1200px;
+$large:1024px;
+$medium:950px;
+$small:750px;
+$x-small:460px;
+
+
+/*
+*
+ma color
+*
+*/
+
+$color_primary: #616571;
+$color_text:#666;
+$color_header_links:#fff;
+$color_links:#616571;
+$color_links_hover:#e43f21;
+$color_border:#f2f2f2;
+$color_headings:#616571;

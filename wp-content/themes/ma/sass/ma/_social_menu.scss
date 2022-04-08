@@ -1,0 +1,39 @@
+.usr_txt{
+    display:none;
+}
+nav.social ul{
+    display:flex;
+    position:relative;
+    margin:0;
+    padding:0.5rem 0 0;
+    justify-content:space-around;
+}
+nav.social ul li {
+    display:inline-block;
+    position:relative;
+    font-family:$font_awesome;
+    font-size:$font_size;
+    list-style:none;
+    width:100%;
+    padding:0.5rem;
+    border:1px solid;
+    background-color:$color_primary;
+    a{
+        color:#fff;
+        &:hover{
+            color:$color_links_hover;
+        }
+    }
+    a[href*="facebook.com"]::before{
+        content:'\f09a';
+    }
+    a[href*="twitter.com"]::before{
+        content:'\f099';
+    }
+    a[href*="instagram.com"]::before{
+        content:'\f16d';
+    }
+    a[href*="linkedin.com"]::before{
+        content:'\f0e1';
+    }
+}
