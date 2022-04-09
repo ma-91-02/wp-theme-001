@@ -42,6 +42,29 @@ if ( ! function_exists( 'ma_header_style' ) ) :
 	 */
 	function ma_header_style() {
 		$header_text_color = get_header_textcolor();
+		$header_links_color = get_theme_mod('header_links_color' ,'#ffffff');
+		$content_links_color = get_theme_mod('content_links_color' ,'#616571');
+		$header_bg_color= get_theme_mod('header_bg_color','#616571');
+		$footer_bg_color= get_theme_mod('footer_bg_color','#616571');
+		?>
+
+		<style type="text/css">
+			.site-header a {
+				color:<?php echo esc_attr($header_links_color);?> ;
+            }
+			.content-area a, .widget-area a,.post span a,.widget li a{
+				color:<?php echo esc_attr($content_links_color);?> ;
+            }
+            .site-header, .main-navigation ul ,.main-navigation li ,.main-navigation a,
+            .menu-bar ul,.menu-bar ul li ,.menu-bar li , .menu-bar a   {
+       			background-color:<?php echo esc_attr($header_bg_color);?> ;
+    		}
+    		.site-footer {
+				background-color:<?php echo esc_attr($footer_bg_color);?> ;
+			}
+		</style>
+		
+		<?php
 
 		/*
 		 * If no custom options for text are set, let's bail.

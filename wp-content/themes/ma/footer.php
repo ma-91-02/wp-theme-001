@@ -16,17 +16,7 @@
 	<?php if (is_active_sidebar('footer-sidebar')) { ?>
 		<div class="footer-sidebar"><?php dynamic_sidebar('footer-sidebar'); ?></div><!-- footer-sidebar --> <?php } ?>
 	<div class="site-info">
-		<a href="<?php echo esc_url(__('https://wordpress.org/', 'ma')); ?>">
-			<?php
-			/* translators: %s: CMS name, i.e. WordPress. */
-			printf(esc_html__('Proudly powered by %s', 'ma'), 'WordPress');
-			?>
-		</a>
-		<span class="sep"> | </span>
-		<?php
-		/* translators: 1: Theme name, 2: Theme author. */
-		printf(esc_html__('Theme: %1$s by %2$s.', 'ma'), 'ma', '<a href="http://underscores.me/">Al-Zurfi Mohamed</a>');
-		?>
+<h4><?php echo get_theme_mod('footer_text','ma | All Rights Reserved');?></h4>
 	</div><!-- .site-info -->
 	<?php
 	if (has_nav_menu('menu-2')) {

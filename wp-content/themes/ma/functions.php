@@ -185,6 +185,61 @@ function ma_resource_hints($urls, $relation_type){
 	 return $urls;
 }
 add_filter('wp_resource_hints','ma_resource_hints',1,2);
+/**
+ * disply theme information on admin dashboard. (._.)
+ */
+function ma_info() {
+	$current_user = wp_get_current_user();
+	echo  '<ul style="background-color:#def5ff; font-size:1rem; border:0.4rem dashed #f2f2f2; text-align: center; font-weight:bold;">
+	<li>'.__('User Name: ','ma').$current_user->user_login.'</li>
+	<li>'.__('Blog Name: ','ma'). get_bloginfo( 'name' ).'</li>
+	<li>'.__('Theme Folder: ','ma').get_bloginfo( 'stylesheet_directory' ).'</li>
+	<li>'.__('Language: ','ma').get_bloginfo( 'language' ).'</li>
+	<li>'.__('RTL Status: ','ma').(is_rtl()==1 ? 'true' : 'false').'</li>
+	</ul>';
+	}
+	function ma_addto_dashboard() {
+		wp_add_dashboard_widget('admin_dashboard_widget', __('Site Information','ma'), 'ma_info');
+	}
+	add_action('wp_dashboard_setup', 'ma_addto_dashboard', 1 ); 
+
+/* changing login page logo */
+function ma_login_logo() { 
+	$admin_logo_url = get_option('admin_logo_url');
+	?>
+	<style type="text/css">
+		#login h1 a, .login h1 a {
+			background-image: url(
+				<?php echo $admin_logo_url;
+				?>); 
+		}
+	</style>
+	<?php }
+	add_action( 'login_enqueue_scripts', 'ma_login_logo' );
+
+/* changing admin bar logo */
+function ma_admin_bar_logo() { ?>
+	<style type="text/css">
+		#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+		background-image: url(<?php echo get_stylesheet_directory_uri() ; ?>/images/logo2.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		color:rgba(0, 0, 0, 0);
+		}
+	</style>
+	<?php } 
+	add_action('wp_before_admin_bar_render', 'ma_admin_bar_logo');
+
+/* changing dashboard footer */
+function ma_change_footer () {
+	$copyright = get_option( 'copyright', 'default_value' );
+	$author = get_option( 'author', 'default_value' );
+	$authorurl = get_option( 'authorurl', 'default_value' );
+	echo '<span class="description">'.__($copyright,"ma").
+	'<a href="'.__($authorurl).' "> '.__($author,"ma").'</a></span>';					 
+}
+// Admin panel footer
+add_filter( 'admin_footer_text', 'ma_change_footer' );
 
 /**
  * Implement the Custom Header feature.
@@ -219,3 +274,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Load ma widget.
+ */
+
+ require get_template_directory(). '/inc/ma_widget.php';
+
+ /**
+ * Load ma dashboard files.
+ */
+
+require get_template_directory(). '/dashboard.php';
+require get_template_directory(). '/info.php';

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ma\n"
 "POT-Creation-Date: 2022-04-09 16:59+0300\n"
-"PO-Revision-Date: 2022-04-09 17:02+0300\n"
+"PO-Revision-Date: 2022-04-09 17:24+0300\n"
 "Last-Translator: \n"
 "Language-Team: ma\n"
 "Language: ar\n"
@@ -20,22 +20,24 @@ msgstr ""
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "عفوا! لا يمكن العثور علي هذه الصفحة."
 
 #: 404.php:21
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"يبدو أنه لم يتم العثور على أي شيء بهذه الصفحة. جرب أي من الروابط ادناه او "
+"استخدم اداة البحث؟"
 
 #: 404.php:30
 msgid "Most Used Categories"
-msgstr ""
+msgstr "الفئات الأكثر استخداما"
 
 #: 404.php:48
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "حاول أن تبحث في الأرشيف الشهري. %1$s"
 
 #: comments.php:35
 #, php-format
@@ -223,7 +225,7 @@ msgstr ""
 #: inc/template-tags.php:73
 #, php-format
 msgid "Tagged %1$s"
-msgstr ""
+msgstr "الكلمات الدلالية %1$s"
 
 #: inc/template-tags.php:83
 #, php-format
